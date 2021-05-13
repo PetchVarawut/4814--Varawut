@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<title>PHY104</title>
+
+<script>
+  function LengthConverter(valNum) {
+    document.getElementById("outputFeet").innerHTML = valNum * 0.032808;
+  }
+</script>
+<script>
+  function temperatureConverter(valNum) {
+    valNum = parseFloat(valNum);
+    document.getElementById("outputKelvin").innerHTML = valNum + 273.15;
+  }
+</script>
+
+<style>
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Calculator {
+    width: 350px;
+    height: 350px;
+    border: 5px solid whitesmoke;
+    border-radius: 20px;
+    background-color: yellow;
+    padding: 15px;
+    margin: 20px;
+    font-family: sans-serif;
+  }
+
+  .Calculator h1 {
+    text-align: center;
+  }
+
+  .Calculator input {
+    background-color: rgb(248, 215, 155);
+    border-radius: 20px;
+    height: 20px;
+  }
+
+  .Celcius {
+    background-color: rgb(248, 215, 155);
+    border-radius: 20px;
+    height: 30px;
+    width: 180px;
+  }
+
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 50px;
+    text-align: center;
+    color: black;
+  }
+
+  body {
+    background-color: pink;
+  }
+
+  .img {
+    border-radius: 20px;
+    border: 5px solid rgb(252, 251, 251);
+    width: 500px;
+    height: 350px;
+  }
+
+  input {
+    margin: 10px;
+  }
+</style>
+</head>
+
+<body>
+  <div>
+    <h2><u>Convert Measurement</u></h2>
+  </div>
+  <div class="container">
+
+    <div class="Calculator">
+      <h1><u> Celcius to Kelvin </u></h1>
+      <br>
+      <label>Celsius (C) :</label>
+      <br>
+      <br>
+      <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)"
+        onchange="temperatureConverter(this.value)">
+      <br>
+      <br>
+      <p>Kelvin (K) : </p>
+      <div class="Celcius">
+        <p> <span id="outputKelvin"></span></p>
+      </div>
+
+
+    </div>
+    <div class="Calculator">
+      <h1><u> Centimeter to Feet </u></h1>
+      <br>
+      <label>Centimeter (CM.) :</label>
+      <br>
+      <br>
+      <input id="inputcm" type="number" placeholder="cm" oninput="LengthConverter(this.value)"
+        onchange="LengthConverter(this.value)">
+      <br>
+      <br>
+      <p>Feet (FT.) : </p>
+      <div class="Celcius">
+        <p><span id="outputFeet"></span></p>
+      </div>
+
+    </div>
+  </div>
+  <div class="container">
+    <img class="img" src="https://study.com/cimages/videopreview/1m7fpstc6p.jpg" alt="">
+  </div>
+</body>
+
+</html>
+
+</html>

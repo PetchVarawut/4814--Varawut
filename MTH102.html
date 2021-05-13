@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEDYUB</title>
+    <style>
+       .triArea{
+           width: 300px;
+           height: 200px;
+           border: 20px solid whitesmoke;
+            border-radius: 10px;
+            background-color:rosybrown;
+            padding: 10px;
+            margin: auto;
+       }
+    </style>
+</head>
+<body style="background-color: navy;">
+    <div class="triArea">
+    <h2>Area of Triangle</h2>
+    <hr>Base: <br>
+    <input type="text" name="" id="base" value="10">
+    <br>Height: <br>
+    <input type="text" name="" id="height" value="10">
+    <br>
+    <p id="result"></p>
+    <script>
+        let b = document.getElementById("base");
+        let h = document.getElementById("height");
+        let area = document.getElementById("result");
+        b.addEventListener("input",triArea);
+        h.addEventListener("input",triArea);
+        function triArea() {
+            let base = parseFloat(b.value);
+            let height = parseFloat(h.value);
+            area.innerHTML = `Area of Triangle is ${(0.5*base*height).toFixed(2)}.`
+        }
+        
+    </script>
+    </div>
+    <br>
+    <center><img src="https://www.onlinemathlearning.com/image-files/area-triangle.png" width="350px" height="200px">
+    </center>
+
+</body>
+</html>
